@@ -1,0 +1,554 @@
+.navbar.fixed {
+    box-shadow: 0 2.5px 2px -2px rgba(0,0,0,.2);
+}
+
+.navbar {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: fixed;
+    z-index: 5000;
+
+}
+.nav_head {
+    display: flex;
+    flex-direction: row;
+    padding: 0.7rem 7%;
+    background: #192F59;
+    justify-content: right;
+}
+
+.nav_social{
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.nav_social span{
+    color: white;
+font-family: var(--mont);
+font-size: 15px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+display: flex;
+align-items: center;
+gap: 0.5rem;
+}
+
+.nav_social a{
+    color: white;
+    font-family: var(--mont);
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+
+
+.nav_toggle {
+    display: none;
+}
+
+.nav_body {
+    display: flex;
+    background: white;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 7%;
+    gap: 3rem;
+    
+
+
+}
+.nav_link {
+    
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    align-items: center;
+
+}
+
+.log{
+    display: flex;
+    gap: 3rem;
+}
+
+.nav_link a {
+    color: black;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+font-family: Montserrat;
+font-size: 1rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+
+
+}
+
+.logo{
+    height: 4.5rem;
+   
+}
+
+.search{
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+}
+.search span svg{
+    font-size: 1.2rem;
+}
+.search a{
+    color: #000;
+font-family: Montserrat;
+font-size: 1rem;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+padding: 0.8rem 2.5rem 0.8rem 1.3rem;
+background: var(--yell);text-align: center;
+}
+
+.hid{
+    display: none !important;
+}
+
+
+footer {
+
+    background: var(--blue);
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+.footer {
+    width: 100%;
+    padding: 0;
+    font-family: var(--mont);
+}
+
+.foot_head {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.6rem 7%;
+   
+    border-bottom: 1px solid #ffffffb0;
+    ;
+}
+
+.foot_head img {
+    width: 15rem !important;
+    height: 4rem !important;
+}
+
+.email {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    font-size: 1.2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    align-items: center;
+   
+
+}
+
+.send {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    padding: 5px;
+    background: white;
+}
+
+.send input::placeholder {
+    font-family: var(--mont);
+}
+
+.send input {
+    padding: 1.15rem 1.4rem;
+    border: none;
+    width: 25rem;
+
+}
+
+.send button {
+    padding: 1rem 3rem;
+    background: var(--yell);
+    font-style: normal;
+    font-weight: 600;
+    font-family: var(--mont);
+    border: none;
+    font-size: 1rem;
+    color: black;
+}
+
+.foot_body {
+    border-bottom: 1px solid #ffffffb0;
+    ;
+    padding: 3rem 7%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.a {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+
+.a p {
+    color: white;
+    font-size: 0.9rem;
+}
+
+.c_tag {
+    padding: 2rem 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+
+
+}
+
+.c_tag p {
+    font-size: 0.9rem;
+}
+
+.a a {
+    color: white;
+    font-size: 0.9rem;
+    width: fit-content;
+}
+.c_tag div{
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    flex-direction: row;
+}
+.c_tag div a{
+    font-size: 0.9rem;
+    color: white;
+  
+}
+
+
+
+@media screen and (max-width: 900px) {
+    .foot_head img {
+        width: 8rem;
+        height: 4rem;
+    }
+
+    .c_tag{
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+
+
+
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1126px) {
+    .nav_link {
+        gap: 2.5em;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+    .search a{
+        display: none;
+    }
+    .hid {
+        display: flex !important;
+    }
+    .nav_head {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 1em 4%;
+
+    }
+
+    .nav_body{
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+    .search span svg{
+        font-size: 1.5rem;
+    }
+
+    .nav_toggle svg{
+        font-size: 1.7rem;
+    }
+    .nav_toggle {
+     
+        justify-content: center;
+        align-items: center;
+        display: flex !important;
+        background: var(--blue);
+        border: none;
+        height: fit-content;
+        outline: none;
+        font-size: 1.2rem;
+        padding: 0.3em;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .nav_toggle svg {
+        color: white;
+    }
+
+    .nav_link {
+        position: absolute !important;
+        display: flex;
+        height: 100vh;
+        padding: 0 !important;
+
+        perspective: 600px;
+        top: 100%;
+        left: 0;
+        flex-direction: column;
+        width: 18rem;
+        background: white;
+        text-align: end;
+
+        box-shadow: 0 10px 10px rgba(58, 57, 57, 0.4);
+    }
+
+    .contact_tag {
+
+        padding: 0;
+        border-radius: 0px;
+    }
+
+    .active_nav::after {
+        display: none;
+
+    }
+    
+    .nav_link a {
+        font-weight: 600;
+        color: black;
+        height: 4rem;
+        width: 100%;
+        border-bottom: 1px solid rgb(220, 219, 219);
+        display: flex;
+        align-items: center !important;
+        
+        padding: 2em 4em 2em 12%;
+        animation: nav 600ms ease forwards;
+        transform: rotateY(45deg);
+        opacity: 0;
+        transform-origin: top;
+    }
+
+    .show_nav {
+        display: block !important;
+    }
+
+    .hide_nav {
+        display: none;
+    }
+
+
+    .nav_link a:nth-child(2) {
+        animation-delay: 200ms;
+    }
+
+    .nav_link a:nth-child(3) {
+        animation-delay: 400ms;
+    }
+
+    .nav_link a:nth-child(4) {
+        animation-delay: 600ms;
+    }
+
+    .nav_link a:nth-child(5) {
+        animation-delay: 800ms;
+    }
+
+    .nav_link a:nth-child(6) {
+        animation-delay: 1s;
+    }
+
+    .nav_link a:nth-child(7) {
+        animation-delay: 1.2s;
+    }
+
+    @keyframes nav {
+        to {
+            transform: rotateY(0);
+            opacity: 1;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1024px) {
+    .foot_head {
+        display: flex !important;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+}
+@media screen and (max-width: 600px) {
+
+
+  
+    .logo{
+        width: 15rem;
+        height: 5rem;
+    }
+    .nav_body{
+        height: 6rem !important;
+        align-items: center;
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 745px) {
+    p {
+        font-size: 1rem !important;
+    }
+
+    .foot_body {
+        display: grid !important;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 3rem;
+    }
+
+    .a{
+        gap: 1rem   ;
+    }
+    .nav_social{
+        gap: 1.5rem;
+        
+    }
+    .nav_social span{
+        font-size: 12px !important;
+    }
+
+    .nav_social a{
+        font-size: 12px !important;
+    }
+}
+
+@media screen and (max-width: 550px) {
+
+    .email{
+        width: 100%;
+    }
+    .send{
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .send input{
+        width: auto !important;
+    }
+    .nav_body{
+        gap: 0;
+
+    }
+
+    .h2{
+        font-size: 1.8rem;
+    }
+  
+    .logo{
+        width: inherit;
+        height: 3rem;
+    }
+
+     .nav_social span{
+        font-size: 9px !important;
+    }
+
+    .nav_social a{
+        font-size: 9px !important;
+    }
+    .nav_social{
+        gap: 0.7rem;
+       
+        
+    }
+    .nav_head{
+        padding: 10px 4%;
+    }
+    .nav_body{
+        padding: 1rem 4% !important;
+
+        height: fit-content !important;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .send{
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .send button{
+        width: 100%;
+    }
+
+    .send input{
+        width: 100% !important;
+    }
+    .c_tag{
+        padding: 2rem 3%;
+        font-size: 0.7rem !important;
+    }
+
+    .c_tag div{
+        gap: 0.8rem;
+    }
+
+}
+
+@media screen and (max-width: 350px) {
+    .nav_toggle svg{
+        font-size: 1.3rem;
+    }
+    .search span svg{
+        font-size: 1rem;
+    }
+   .logo{
+    width: 12rem;
+   
+   }
+}
+
+
