@@ -6,23 +6,23 @@ const Faq = () => {
   const faqData = [
     {
       id: 1,
-      head: "Lorem ipsum dolor sit amet, consectetur ?",
-      body: " As the only university where a renowned design school comes together with premier colleges, we are making learning more relevant and transformational. We are enriched by the wide range.",
+      question: "What programs does Guardmaster Institute Canada offer?",
+      answer: "Guardmaster Institute Canada offers a diverse range of programs including Mini-MBA, Professional Proficiency Certificates and Diplomas in Corporate Security Management, Loss Prevention Management, Private Security Business Management, Business Resilience & Disaster Recovery Studies, and Supply Chain Security Management."
     },
     {
       id: 2,
-      head: "Lorem ipsum dolor sit amet, consectetur ?",
-      body: " As the only university where a renowned design school comes together with premier colleges, we are making learning more relevant and transformational. We are enriched by the wide range.",
+      question: "Are the programs recognized in Canada?",
+      answer: "Yes, our programs are accredited and recognized by relevant authorities and professional bodies in Canada and internationally. We are also licensed by the Governments of Ontario and Alberta for Provincial Security Guard Licensing programs."
     },
     {
       id: 3,
-      head: "Lorem ipsum dolor sit amet, consectetur ?",
-      body: " As the only university where a renowned design school comes together with premier colleges, we are making learning more relevant and transformational. We are enriched by the wide range.",
+      question: "Can international students enroll in Guardmaster Institute Canada programs?",
+      answer: "Yes, our programs are open to both domestic and international students. We welcome learners from around the world."
     },
     {
       id: 4,
-      head: "Lorem ipsum dolor sit amet, consectetur ?",
-      body: " As the only university where a renowned design school comes together with premier colleges, we are making learning more relevant and transformational. We are enriched by the wide range.",
+      question: "What are the admission requirements?",
+      answer: "Admission requirements vary by program. Please refer to the specific program pages on our website for detailed information."
     },
   ];
 
@@ -45,7 +45,7 @@ const Faq = () => {
           {faqData.map((item) => (
             <div key={item.id} className={`faq_content ${openItemId === item.id ? "faq_open" : ""}`}>
               <div onClick={() => handleItemClick(item.id)} className="faqq">
-                <p>{item.head}</p>
+                <p>{item.question}</p>
                 <span
                   onClick={() => handleItemClick(item.id)}
                   className="faq_icon"
@@ -59,7 +59,7 @@ const Faq = () => {
               </div>
 
               {openItemId === item.id && (
-                <div className="faq_body">{item.body}</div>
+                <div className="faq_body">{item.answer}</div>
               )}
             </div>
           ))}

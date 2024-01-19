@@ -34,7 +34,7 @@ const Register = () => {
       <div className="side2">
         <div className="don">
           <p>Already have an account?</p>
-          <Link>Sign In</Link>
+          <Link to="/login">Sign In</Link>
         </div>
         <div className="login">
           <div className="login_logo">
@@ -105,8 +105,9 @@ const Register = () => {
               </div>
             </div>
 
-            <Link>Forgot Password?</Link>
-            <button>Login</button>
+            <p className="log_p">I have read and agree to GMG Security Guard & Services <span>Privacy Policy </span> and <span>Terms of Use</span></p>
+            
+            <button>Sign Up</button>
           </form>
         </div>
       </div>

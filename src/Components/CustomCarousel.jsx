@@ -1,75 +1,115 @@
-import React from "react";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
+import React, { Component } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import { RiArrowRightLine, RiArrowLeftLine } from "react-icons/ri";
 import { Link } from "react-router-dom";
-import { RiArrowRightLine } from "react-icons/ri";
-import our1 from "../assets/our1.png";
-import our2 from "../assets/our2.png";
-import our3 from "../assets/our3.png";
-import our4 from "../assets/our4.png";
+import our1 from "../assets/1.png";
+import our2 from "../assets/2.png";
+import our3 from "../assets/3.png";
+import our4 from "../assets/4.png";
+import our5 from "../assets/Rectangle21.png";
 
-const CustomCarousel = () => {
   const data = [
     {
       id: 1,
-      head: "Biochemistry",
+      head: "Corporate Security Mgmt",
       image: our1,
-      body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lacinia leo eget turpis pretium elementum.",
+      body: "Corporate safety through security policies and risk management.",
       span: "Biochemistry",
     },
     {
       id: 2,
-      head: "Major In Economics",
+      head: "Loss Prevention Mgmt",
       image: our2,
-      body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lacinia leo eget turpis pretium elementum.",
+      body: "Study of safeguarding assets and ensuring profitability",
       span: "Economics",
     },
     {
       id: 3,
-      head: "Business Media",
+      head: "Private Security Business Mgmt",
       image: our3,
-      body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lacinia leo eget turpis pretium elementum.",
+      body: "Enhance skills in private security business management.",
       span: "Media",
     },
     {
       id: 4,
-      head: "Corporate Finance",
+      head: "Business Resilience & Disaster Recovery Studies",
       image: our4,
-      body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lacinia leo eget turpis pretium elementum.",
+      body: "Build resilience with our Disaster Recovery Course.",
+      span: "Finance",
+    },
+    {
+      id: 5,
+      head: "Supply Chain Security Management",
+      image: our5,
+      body: "Enhance skills in ensuring secure and resilient supply chains.",
       span: "Finance",
     },
   ];
 
-  const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 4,
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3.3,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-    },
-    mobile: {
-      breakpoint: { max: 745, min: 0 },
-      items: 1,
-    },
-  };
-
-  return (
-    <div className="our">
+  export default class CustomCarousel extends Component {
+    constructor(props) {
+      super(props);
+      this.next = this.next.bind(this);
+      this.previous = this.previous.bind(this);
+    }
+    next() {
+      this.slider.slickNext();
+    }
+    previous() {
+      this.slider.slickPrev();
+    }
+    render() {
+      const settings = {
+        dots: false,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 4.3,
+        slidesToScroll: 1,
+        arrows: false,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+            },
+          },
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 2,
+            },
+          },
+          {
+            breakpoint: 550,
+            settings: {
+              slidesToShow: 1,
+            },
+          },
+        ],
+      };
+      return (
+        <div className="our">
       <div className="our_head">
-        <span>Our Courses</span>
-        <h2 className="h2">Graduate Programs </h2>
+        <span>Our Program Courses</span>
+        <h2 className="h2">Mini MBA Programs <div className="butt">
+            <span className="button" onClick={this.previous}>
+              <RiArrowLeftLine />
+            </span>
+            <span className="button" onClick={this.next}>
+              <RiArrowRightLine />
+            </span>
+          </div></h2>
       </div>
 
-      <div className="our_grid">
-        <Carousel responsive={responsive} className="carousel" autoPlay={false}>
-          {data.map((item) => (
+      <div  className="our_grid">
+      <Slider
+            className="carousel"
+            ref={(c) => (this.slider = c)}
+            {...settings}
+          >
+            {data.map((item) => (
             <div className="slide_card">
                 <img src={item.image} alt="" />
               
@@ -95,7 +135,7 @@ const CustomCarousel = () => {
                       </clipPath>
                     </defs>
                   </svg>
-                  {item.span}
+                  Mini MBA
                 </span>
                 <h3>{item.head}</h3>
                 <p>{item.body}</p>
@@ -105,10 +145,16 @@ const CustomCarousel = () => {
               </div>
             </div>
           ))}
-        </Carousel>
+          </Slider>
       </div>
     </div>
-  );
-};
+         
+       
+      );
+    }
+  }
+  
 
-export default CustomCarousel;
+
+
+

@@ -3,9 +3,9 @@
 :root {
   --mont: 'Montserrat', sans-serif;
   --sky: 'Syne', sans-serif;
-  --blue: linear-gradient(180deg, #123373 0%, #192F59 100%);
+  --blue:  linear-gradient(180deg, #003DA5 0%, #023B9D 100%);
   --yell: #FFD347;
-  --blu: #192F59;
+  --blu: #003DA5;
 
 }
 
@@ -15,7 +15,7 @@ a{
 
 .h2{
   color: #181818;
-  font-family: var(--sky);
+  font-family: var(--sky) !important;
   font-size: 2.5rem;
   font-style: normal;
   font-weight: 500;
@@ -46,6 +46,7 @@ html{
   overflow-x: hidden;
   scroll-behavior: smooth;  
   scroll-padding-top: 3rem;
+  box-sizing: border-box;
 }
 
 

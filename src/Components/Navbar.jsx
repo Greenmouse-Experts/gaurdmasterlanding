@@ -55,7 +55,7 @@ const Navbar = () => {
             <FiPhone /> +000 123 456 7890
           </span>
           <Link to="login" >Student Login</Link>
-          <Link>Contact Us</Link>
+          <Link to="contact">Contact Us</Link>
         </div>
       </div>
 
@@ -63,6 +63,7 @@ const Navbar = () => {
         <button className="nav_toggle" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <RiCloseFill /> : <RiMenuFill />}
         </button>
+        
         <div className="log">
           <img className="logo" src={logo} alt="" />
           <div
@@ -73,16 +74,16 @@ const Navbar = () => {
             {" "}
             Home
           </NavLink>
-          <NavLink onClick={toggle} onBlur={hide} onFocus={show} to="about">
+          <NavLink onClick={toggle} onBlur={hide} onFocus={show} to="/about">
             About
           </NavLink>
-          <NavLink onClick={toggle} onBlur={hide} onFocus={show} to="/services">
+          <NavLink onClick={toggle} onBlur={hide} onFocus={show} to="">
             Courses <IoIosArrowDown />
           </NavLink>
-          <NavLink onClick={toggle} onBlur={hide} onFocus={show} to="/gallery">
-            Admission
+          <NavLink onClick={toggle} onBlur={hide} onFocus={show} to="faq">
+          FAQs
           </NavLink>
-          <NavLink className="hid" onClick={toggle} onBlur={hide} onFocus={show} to="/program">
+          <NavLink to="/course" className="hid" onClick={toggle} onBlur={hide} onFocus={show} >
           View Our Programs
           </NavLink>
         </div>
@@ -93,7 +94,7 @@ const Navbar = () => {
           <span>
             <FiSearch />
           </span>
-          <Link>View Our Programs</Link>
+          <Link to="/course">View Our Programs</Link>
         </div>
       </div>
     </div>

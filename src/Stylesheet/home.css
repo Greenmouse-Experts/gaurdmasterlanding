@@ -25,7 +25,7 @@
 
 .home_text h2{
     color: #FFF;
-font-family: var(--sky);
+font-family: var(--sky) !important;
 font-size: 2.6rem;
 font-style: normal;
 font-weight: 500;
@@ -34,7 +34,7 @@ line-height: normal;
 
 .home_text p{
     color: #FFF;
-font-family: Montserrat;
+font-family: var(--mont) !important;
 font-size: 1.2rem;
 font-style: normal;
 font-weight: 400;
@@ -46,7 +46,7 @@ line-height: normal;
     align-items: center;
     gap: 1rem;
     color: #000;
-font-family: Montserrat;
+font-family: var(--mont) !important;
 font-size: 1.1rem;
 font-style: normal;
 font-weight: 500;
@@ -63,7 +63,7 @@ padding: 0.7rem 1.2rem ;
 
 .path h2 {
     color: #181818;
-font-family: var(--sky);
+font-family: var(--sky)!important;
 font-size: 2.5rem;
 font-style: normal;
 font-weight: 500;
@@ -74,7 +74,7 @@ line-height: normal;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1.2rem;
-    font-family: var(--mont);
+    font-family: var(--mont)!important;
     padding-top: 2.5rem;
 }
 
@@ -86,8 +86,8 @@ line-height: normal;
     gap: 1.2rem;
     justify-content: space-between;
 }
-.path_box span svg{
-    font-size: 1.6rem;
+.path_box img{
+    width: 2rem;
 }
 .path_box h3{
     font-size: 18px;
@@ -127,6 +127,11 @@ line-height: normal;
     gap: 2.5rem;
 }
 
+.no{
+    padding-left: 0;
+    margin-left: -3rem;
+}
+
 .dis_img{
     width: 90%;
 }
@@ -135,32 +140,32 @@ line-height: normal;
 }
 
 .dis_text{
-    font-family: var(--mont);
+    font-family: var(--mont)!important;
     display: flex;
     flex-direction: column;
     width: 140%;
 }
 
 .dis_text span{
-    color: #192F59;
+    color: var(--blu);
 font-size: 1rem;
 font-style: normal;
 font-weight: 500;
 line-height: normal;
-padding-bottom: 0.5rem;
+padding-bottom: 1rem;
 }
 
-.dis_text p{
+.dis_text> p{
     color: #181818;
 font-size: 1.2rem;
 font-style: normal;
 font-weight: 500;
 line-height: normal;
-padding-top: 1rem;
+padding-top: 1.8rem;
 }
 
 .dis_text a{
-    color: #192F59;
+    color: var(--blu);
     font-size: 1.2rem;
     display: flex;
     align-items: center;
@@ -175,56 +180,96 @@ padding-top: 1rem;
     padding: 6rem 0;
     background: #EDEDED;
     width: 100%;
-    font-family: var(--mont);
+    font-family: var(--mont)!important;
 }
 
 .our_head{
     padding: 0 7%;
 }
 .our_head span{
-    color: #192F59;
+    color: var(--blu);
     font-size: 1rem;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
     padding-bottom: 0.5rem;
 }
+.our_head h2{
+    display: flex;
+    justify-content: space-between;
+}
+
+.our_head h2 div{
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.butt span{
+    padding: 0.6rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blu);
+    
+}
+
+.butt svg{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700 !important;
+}
+
 
 .our_grid{
     margin-top: 3rem;
-    padding-left: 7%;
     width: 100%;
+   
 }
 
 .carousel{
+    padding-top: 3rem;
     width:100%;
-    padding-left: 1rem;
+    padding-left: 7%;
+    height: 100%;
 }
 
 .slide_card{
    background: white;
-   margin-right: 2rem;
+   margin-right: 2rem !important;
+   width: fit-content !important;
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+
+   
+  
    
 }
+
+
 .slide_card .content{
     padding: 2rem 2rem 3rem 2rem;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: column ;
+    justify-content: space-between !important;
+    height: 100%;
     gap: 1rem;
     position: relative;
+    height: 13rem;
 }
 
 .slide_card .content h3{
     color: #0D0D0D;
-font-family: var(--sky);
+font-family: var(--sky)!important;
 font-size: 19px;
 font-style: normal;
 font-weight: 700;
 line-height: normal;
 }
 .slide_card .content a{
-    color: #192F59;
+    color: var(--blu);
     font-size: 1.1rem;
     display: flex;
     align-items: center;
@@ -232,21 +277,24 @@ line-height: normal;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+    align-self: flex-end;
+    justify-self: flex-end !important;
 }
 
 .content span{
     position: absolute;
-    top: -27px;
+    top: -19px;
     right: 20px;
     display: flex;
     align-items: center;
     background: var(--yell);
     width: fit-content;
-    padding: 0.8rem 0.7rem;
+    padding: 0.6rem 0.7rem;
     color: #0D0D0D;
     gap: 0.5rem;
 font-size: 13px;
 font-weight: 600;
+border-radius: 4px;
 
 }
 .slide_card img{
@@ -261,7 +309,7 @@ font-weight: 600;
     gap: 2rem;
     justify-content: space-between;
     align-items: center;
-    font-family: var(--sky);
+    font-family: var(--sky)!important;
     color: white;
 }
 
@@ -281,7 +329,7 @@ font-weight: 600;
 }
 
 .num_div p{
-    font-family: var(--mont);
+    font-family: var(--mont)!important;
 }
 .we{
     padding: 15rem 7%;
@@ -308,7 +356,7 @@ font-weight: 600;
 }
 
 .we p{
-    font-family: var(--mont);
+    font-family: var(--mont)!important;
 }
 
 
@@ -357,7 +405,7 @@ line-height: normal;
     justify-content: space-between;
     width: 100%;
     gap: 2.5rem;
-    font-family: var(--mont);
+    font-family: var(--mont)!important;
 }
 
 .faq{
@@ -379,7 +427,7 @@ line-height: normal;
 
 .faqq{
     border-radius: 5px;
-    border: 1px solid #192F59;
+    border: 1px solid var(--blu);
     padding: 4px;
     display: flex;
     justify-content: space-between;
@@ -409,7 +457,7 @@ padding-left: 1rem;
 
 .faq_icon {
     border-radius: 5px;
-    border: 1px solid #192F59;
+    border: 1px solid var(--blu);
     padding: 0.4rem;
     display: flex;
     justify-content: center;
@@ -462,7 +510,7 @@ padding-left: 1rem;
     font-size: 18px;
 font-weight: 600;
 line-height: 166.4%;
-font-family: var(--mont);
+font-family: var(--mont)!important;
 }
 
 .slider{
@@ -503,11 +551,11 @@ font-family: var(--mont);
     flex-direction: column !important;
     margin-right: 2.5rem !important;
     width: fit-content !important;
-    font-family: var(--mont);
+    font-family: var(--mont)!important;
 }
 .slider_box > span{
     color: black;
-  font-family: var(--sky);
+  font-family: var(--sky)!important;
   font-size: 2.5rem;
   font-style: normal;
   font-weight: 500;
@@ -529,7 +577,7 @@ padding-bottom: 1rem;
     align-items: center;
     gap: 0.8rem;
     color: #0D0D0D;
-font-family: var(--sky);
+font-family: var(--sky)!important;
 font-size: 19px;
 font-style: normal;
 font-weight: 700;
@@ -553,8 +601,8 @@ border-bottom: 1px solid  #B8B8B8;
     align-items: center;
     gap: 1rem;
     padding-top: 2rem;
-    color: #192F59;
-font-family: Montserrat;
+    color: var(--blu);
+font-family: var(--mont) !important;
 font-size: 16px;
 font-style: normal;
 font-weight: 700;
@@ -562,7 +610,7 @@ line-height: normal;
 }
 
 .slider_box div span{
-    background: #192F59;
+    background: var(--blu);
     padding: 0.8rem;
     border-radius: 50%;
     color: white;
@@ -607,6 +655,10 @@ line-height: normal;
 
     .discover{
         flex-direction: column;
+    }
+    .no{
+        padding-left: 7%;
+        margin-left: 0;
     }
     .dis_img{
         width: 100%;

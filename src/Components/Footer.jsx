@@ -26,10 +26,23 @@ const Footer = () => {
                 <h3>Quick Links</h3>
                 <Link to="/">Home</Link>
                 <Link to="/about">About Us</Link>
-                <Link to="/services" >Courses</Link>
-                <Link>Admission</Link>
+                <Link to="/course" >Courses</Link>
+                <Link to="/bemember">Become a Member</Link>
             </div>
-            
+            <div className="a">
+            <h3>Courses</h3>
+               <p>Course 001</p>
+                <p>Course 002</p>
+                <p>Course 003</p>
+                <p>Course 004</p>
+            </div>
+            <div className="a">
+            <h3>Company Details</h3>
+               <p>No 8 Company address. Nigeria..</p>
+                <p>+1 905 452 2470</p>
+                <p>info@guardmasterinstitute.ca</p>
+                <p>www.guardmasterinstitute.ca</p>
+            </div>
             <div className="a">
             <h3>Our Programs</h3>
                 <Link >Mini-MBA Programs</Link>
@@ -38,13 +51,7 @@ const Footer = () => {
                 <Link>Provincial Licensing and Micro Credential Programs</Link>
             </div>
            
-            <div className="a">
-            <h3>Company Details</h3>
-               <p>No 8 Company address. Nigeria..</p>
-                <p>0701 234 5678</p>
-                <p>company@gmail.com</p>
-                <p>info@company.com</p>
-            </div>
+            
         </div>
         <div className="c_tag">
             <p>© Copyright 2023 Guardmaster Institute.</p>

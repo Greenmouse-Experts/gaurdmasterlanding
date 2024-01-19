@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { AiFillEye } from "react-icons/ai";
 import "../Stylesheet/login.css";
 import log from "../assets/logo.png"
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -12,6 +13,12 @@ const Login = () => {
   const togglePassword = () => {
     setShowPassword(!showPassword); // Toggle the showPassword state
   };
+
+  const Navigate = useNavigate()
+  const login= ()=>(
+    Navigate('/admin')
+  )
+
   return (
     <div className="main_login">
       <div className="side1">
@@ -75,7 +82,7 @@ const Login = () => {
             </div>
 
             <Link>Forgot Password?</Link>
-            <button>Login</button>
+            <button onClick={login}>Login</button>
           </form>
         </div>
       </div>

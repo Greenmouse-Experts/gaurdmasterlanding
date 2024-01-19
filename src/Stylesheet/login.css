@@ -18,7 +18,7 @@ min-height: 100vh;
     align-items: center;
     justify-content: center;
     padding: 5rem 5%;
-    font-family: var(--mont);
+    font-family: var(--mont)!important;
     background: #192F59;
     background-image: url(../assets/login.png);
     background-position: center;
@@ -82,7 +82,7 @@ line-height: normal;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    font-family: var(--mont);
+    font-family: var(--mont)!important;
     padding: 1.6rem 5rem;
     width: fit-content;
     border: 1px solid white;
@@ -103,7 +103,7 @@ line-height: normal;
     display: flex;
     flex-direction: column;
     padding: 3rem 2rem;
-    font-family: var(--mont);
+    font-family: var(--mont)!important;
 }
 
 .don{
@@ -240,7 +240,7 @@ border: 1px solid #192F59;
     padding: 1rem;
     border: none;
     color: rgba(0, 0, 0, 0.589);
-font-family: var(--mont);
+font-family: var(--mont)!important;
 font-size: 17px;
 font-style: normal;
 font-weight: 500;
@@ -263,7 +263,7 @@ line-height: normal;
     color: #192F59;
 font-size: 19px;
 font-style: normal;
-font-family: var(--mont);
+font-family: var(--mont)!important;
 font-weight: 600;
 line-height: normal;
 }
@@ -274,7 +274,7 @@ line-height: normal;
     padding: 1.1rem;
     color: #FFF;
 text-align: center;
-font-family: var(--mont);
+font-family: var(--mont)!important;
 font-size: 19px;
 font-style: normal;
 font-weight: 700;
@@ -303,6 +303,17 @@ margin-top: 10px;
     gap: 0.8rem;
 }
 
+.log_p{
+    color: #646464;
+font-size: 19px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+.log_p span{
+    color: var(--blu);
+}
 @media screen and (max-width: 1100px) {
     .login{
         padding: 3rem 4rem;
@@ -323,7 +334,7 @@ margin-top: 10px;
     }
     .main_login{
         padding: 6rem 5%;
-        font-family: var(--mont);
+        font-family: var(--mont)!important;
         background: #192F59;
         background-image: url(../assets/login.png);
         background-position: center;
