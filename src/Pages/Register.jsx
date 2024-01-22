@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import 'react-phone-number-input/style.css'
-import PhoneInput from 'react-phone-number-input'
+// import PhoneInput from 'react-phone-number-input'
 import logo from "../assets/wlogo.png";
 import { Link } from "react-router-dom";
 import { AiFillEye } from "react-icons/ai";
