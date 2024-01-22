@@ -34,7 +34,7 @@ const Login = () => {
       console.log(data);
       toast.success('Login Successful')
       setIsBusy(false)
-      window.location.replace(`https://gaurdmasterstudent.netlify.app/auth/${data.accessToken}`)
+      window.location.replace(`https://guardstudent.netlify.app/auth/${data.accessToken}`)
     })
     .catch((error) => {
       console.log(error);
