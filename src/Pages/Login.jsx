@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import logo from "../assets/wlogo.png";
-import go from "../assets/go.svg";
 import { Link } from "react-router-dom";
 import { AiFillEye } from "react-icons/ai";
 import "../Stylesheet/login.css";
 import log from "../assets/logo.png"
-import { useNavigate } from "react-router-dom";
+import { loginUser } from "../services/api/authApi";
+import { toast } from "react-toastify";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -13,11 +13,34 @@ const Login = () => {
   const togglePassword = () => {
     setShowPassword(!showPassword); // Toggle the showPassword state
   };
+  const [isBusy, setIsBusy] = useState(false)
+  const [userDetail, setUserDetail] = useState({
+    email: "",
+    password: "",
+  });
+  const handleChange = (name, value) => {
+    setUserDetail({ ...userDetail, [name]: value });
+  };
 
-  const Navigate = useNavigate()
-  const login= ()=>(
-    Navigate('/admin')
-  )
+  const handleSubmit = async(e) => {
+    e.preventDefault()
+    setIsBusy(true)
+    const payload = {
+      email: userDetail.email,
+      password: userDetail.password
+    }
+    await loginUser(payload)
+    .then((data) => {
+      console.log(data);
+      toast.success(data.message)
+      setIsBusy(false)
+    })
+    .catch((error) => {
+      console.log(error);
+      toast.error(error?.response?.data?.message)
+      setIsBusy(false)
+    })
+  }
 
   return (
     <div className="main_login">
@@ -47,22 +70,23 @@ const Login = () => {
             <h3>Welcome Back!</h3>
         </div>
           <h2>Log in</h2>
-          <div className="go">
+          {/* <div className="go">
             <span>
               <img src={go} alt="" />
             </span>
 
             <p>Continue with Google</p>
-          </div>
+          </div> */}
 
           
-          <form action="" className="login_form">
-            <span className="or">or</span>
+          <form onSubmit={handleSubmit} className="login_form">
+            {/* <span className="or">or</span> */}
 
             <div className="input">
               <label htmlFor="email">Email</label>
               <div>
-                <input type="text" placeholder="Enter Email" />
+                <input type="text" placeholder="Enter Email"  value={userDetail.email}
+                    onChange={(e) => handleChange("email", e.target.value)}/>
               </div>
             </div>
             <div className="input">
@@ -72,6 +96,8 @@ const Login = () => {
                   type={showPassword ? "text" : "password"}
                   name="password"
                   placeholder="Enter Password"
+                  value={userDetail.password}
+                  onChange={(e) => handleChange("password", e.target.value)}
                 />
                 <span className="toggle-password" onClick={togglePassword}>
                   <span className="eye-icon">
@@ -82,7 +108,7 @@ const Login = () => {
             </div>
 
             <Link>Forgot Password?</Link>
-            <button onClick={login}>Login</button>
+            <button>{isBusy? "Logging In..." : "Login"}</button>
           </form>
         </div>
       </div>
