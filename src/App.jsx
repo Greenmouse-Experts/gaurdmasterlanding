@@ -1,11 +1,10 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import ScrollToTop from "./components/ScrollToTop";
+// import ScrollToTop from "./components/ScrollToTop";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import Home from "./Pages/Home";
 import Navbar from "./Components/Navbar";
-import Footer from "./Components/Footer";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import Course from "./Pages/Course";
@@ -13,6 +12,7 @@ import BeMember from "./Pages/BeMember";
 import Faq from "./Pages/Faq";
 import AboutUs from "./Pages/AboutUs";
 import VerifyUser from "./Pages/VerifyUser";
+import ScrollToTop from "./Components/ScrollToTop";
 
 function App() {
   return (
