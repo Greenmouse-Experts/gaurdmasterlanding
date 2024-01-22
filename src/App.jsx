@@ -1,6 +1,6 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import ScrollToTop from "./components/ScrollToTop";
+// import ScrollToTop from "./components/ScrollToTop";
 import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import Home from "./Pages/Home";
@@ -12,6 +12,7 @@ import BeMember from "./Pages/BeMember";
 import Faq from "./Pages/Faq";
 import AboutUs from "./Pages/AboutUs";
 import VerifyUser from "./Pages/VerifyUser";
+import ScrollToTop from "./Components/ScrollToTop";
 
 function App() {
   return (
