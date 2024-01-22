@@ -5,7 +5,6 @@ import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import Home from "./Pages/Home";
 import Navbar from "./Components/Navbar";
-import Footer from "./Components/Footer";
 import About from "./Pages/About";
 import Contact from "./Pages/Contact";
 import Course from "./Pages/Course";
