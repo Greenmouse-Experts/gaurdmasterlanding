@@ -18,12 +18,12 @@ const RegisterSuccess = ({ pop, showPop }) => {
               alt="icon"
               className="w-24 mx-auto"
             />
-            <p className="text-2xl font-semibold">Registration Successful</p>
-            <p className="mb-8 mt-6">
+            <p className="text-2xl font-semibold mont">Registration Successful</p>
+            <p className="mb-8 mt-6 mont">
               A verification mail has been forwarded to your mailbox. Please
               click on the link provided to verify your account and gain access.
             </p>
-            <Link to={"/"} className="mt-6 font-semibold">
+            <Link to={"/"} className="mt-6 mont font-semibold">
               Continue
             </Link>
           </div>

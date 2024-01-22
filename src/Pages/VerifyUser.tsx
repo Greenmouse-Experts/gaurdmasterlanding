@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify';
 import { BeatLoader } from 'react-spinners';
 import logo from '../assets/logo.png'
 
 const VerifyUser = () => {
     const myParam = new URLSearchParams(location.search).get('token');
+    const navigate = useNavigate()
     const [isLoading, setIsLoading] = useState(false)
     const [isError, setIsError] = useState(false)
     const [isSuccess, setIsSuccess] = useState(false)
@@ -23,6 +24,9 @@ const VerifyUser = () => {
         toast.success('Email verified successfully')
         setIsLoading(false)
         setIsSuccess(true)
+        setTimeout(() => {
+          navigate('/login')
+        }, 2000);
       })
       .catch((error) => {
           toast.error(error.response.data.message)
@@ -35,7 +39,7 @@ const VerifyUser = () => {
   return (
     <>
       <div className="main_login">
-      <div className="bg-primary h-screen w-full">
+      <div className="bg-primary h-screen w-full mont">
         <div className="w-full h-full bg-login">
           <div className="box h-full flex items-center justify-center">
             <div className="lg:w-[550px] mx-auto bg-white lg:px-16 p-6">
@@ -74,7 +78,7 @@ const VerifyUser = () => {
                     <p
                       className="mt-4 fw-600 text-gray-500 text-center italics fs-300"
                     >
-                      Click to resend mail
+                      Please make sure you click on the correct link on the verication mail.
                     </p>
                   </div>
                 )}

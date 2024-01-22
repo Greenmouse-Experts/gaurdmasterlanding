@@ -32,8 +32,9 @@ const Login = () => {
     await loginUser(payload)
     .then((data) => {
       console.log(data);
-      toast.success(data.message)
+      toast.success('Login Successful')
       setIsBusy(false)
+      window.location.replace(`https://gaurdmasterstudent.netlify.app/auth/${data.accessToken}`)
     })
     .catch((error) => {
       console.log(error);
