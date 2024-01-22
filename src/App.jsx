@@ -12,6 +12,7 @@ import Course from "./Pages/Course";
 import BeMember from "./Pages/BeMember";
 import Faq from "./Pages/Faq";
 import AboutUs from "./Pages/AboutUs";
+import VerifyUser from "./Pages/VerifyUser";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/auth/verify" element={<VerifyUser/>}/>
       </Routes>
 
       
