@@ -30,7 +30,7 @@ const AboutUs = () => {
         <br />
         <br />
         <br />
-         Founded in 2023, Guardmaster Institute was established to address the
+        Founded in 2023, Guardmaster Institute was established to address the
         mandatory training requirements within the corporate security sector.
         Over time, we've broadened our sector focus and refined our delivery
         methodologies to emerge as the preeminent provider of accredited

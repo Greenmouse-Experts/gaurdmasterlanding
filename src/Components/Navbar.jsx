@@ -73,8 +73,8 @@ const Navbar = () => {
             {" "}
             Home
           </NavLink>
-          <NavLink onClick={toggle} onBlur={hide} onFocus={show} to="/about">
-            About
+          <NavLink onClick={toggle} className={'whitespace-nowrap'} onBlur={hide} onFocus={show} to="/about">
+            About GICSM
           </NavLink>
           <NavLink onClick={toggle} onBlur={hide} onFocus={show} to="">
             Courses <IoIosArrowDown />

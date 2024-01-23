@@ -152,9 +152,17 @@ const Course = () => {
   return (
     <div className=" about_main">
       <Header image={course} title="Courses" body="Courses" />
+      <div id="courses">
+      </div>
       <SliderProps head="Mini MBA Programs" data={data} span="Mini MBA"/>
+      <div id="diploma">
+      </div>
       <SliderProps head="Professional Proficiency Diploma (PPD) Programs" data={data2} span="PPD Programs" />
+      <div id="ppcp">
+      </div>
       <SliderProps head="Professional Proficiency Certificate (PPC) Programs" data={data3} span="PPC Programs" />
+      <div id="plpcp">
+      </div>
       <SliderProps head="Provincial Licensing And Professional Certification Programs" data={data4} span="PCP Programs" />
       <Footer/>
     </div>

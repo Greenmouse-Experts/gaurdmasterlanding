@@ -16,6 +16,7 @@ import svg1 from "../assets/svg1.svg"
 import svg2 from "../assets/svg2.svg"
 import sv from "../assets/sv.svg"
 import Footer from "../Components/Footer";
+import { HashLink } from "react-router-hash-link/dist/react-router-hash-link.cjs.production";
 
 
 
@@ -25,25 +26,25 @@ const Home = () => {
       icon: icon1 ,
       head: "Mini-MBA Programs",
       body: "Providing participants with a comprehensive overview of essential business concepts and management skills",
-      link: "",
+      link: "/course#courses",
     },
     {
       icon: icon2 ,
       head: "Professional Proficiency Diploma (PPD) Programs",
       body: "Providing participants with a comprehensive overview of essential business concepts and management skills",
-      link: "",
+      link: "/course#diploma",
     },
     {
       icon: icon3,
       head: "Professional Proficiency Certificate (PPC) Programs",
       body: "Providing participants with a comprehensive overview of essential business concepts and management skills",
-      link: "",
+      link: "/course#ppcp",
     },
     {
       icon:icon4,
       head: "Provincial Licensing And Professional Certification Programs",
       body: "Providing participants with a comprehensive overview of essential business concepts and management skills",
-      link: "",
+      link: "/course#plpcp",
     },
   ];
 
@@ -113,9 +114,9 @@ const Home = () => {
              <h3>{item.head}</h3>
               <p>{item.body}</p>
               <div className="path_link">
-                <Link>
+                <HashLink to={item.link}>
                   <HiArrowRight />
-                </Link>
+                </HashLink>
               </div>
             </div>
           ))}
@@ -145,7 +146,6 @@ const Home = () => {
           <div className="num_div">
             <h2><img src={item.icon} alt="" />{item.num}</h2>
             <h3>{item.head}</h3>
-            <p>{item.body}</p>
           </div>
         ))}
       </div>
@@ -155,11 +155,11 @@ const Home = () => {
         <h2 className="h2">
           We're <span>Guardmaster Institute </span> <br /> & We're Different
         </h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lacinia
-          leo eget turpis <br />
-          pretium elementum. Vivamus ante purus.
-        </p>
+        <div className="flex">
+        <Link to="/course" className="bg-[#FFD347] mont flex items-center p-4 lg:p-5 text-xl text-black font-medium gap-x-3">
+            View Our Programs <RiArrowRightLine />
+          </Link>
+        </div>
       </div>
 
      

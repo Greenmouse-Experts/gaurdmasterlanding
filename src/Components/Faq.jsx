@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { RiArrowLeftSLine, RiArrowDownSLine } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 const Faq = () => {
   const [openItemId, setOpenItemId] = useState(null);
@@ -36,11 +37,11 @@ const Faq = () => {
   return (
     <div className="faq_main">
       <div className="faq">
-        <h2 className="h2">Get Answers to all your Questions</h2>
+        <h2 className="h2 mt-6">Get Answers to all your Questions</h2>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lacinia
-          leo eget turpis pretium elementum. Vivamus ante purus.
+          Can't find what you're looking for, <Link to={'/faq'} className="font-medium text-blue-800 ">click here</Link> to view more
         </p>
+
         <div className="faq_div">
           {faqData.map((item) => (
             <div key={item.id} className={`faq_content ${openItemId === item.id ? "faq_open" : ""}`}>

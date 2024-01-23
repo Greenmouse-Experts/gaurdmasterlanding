@@ -65,4 +65,7 @@ html{
   .mont{
     font-family: var(--mont)!important;
   }
+  .syne{
+    font-family: 'Syne', sans-serif;
+  }
 }
