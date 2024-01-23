@@ -121,6 +121,80 @@ background: var(--yell);text-align: center;
 }
 
 
+.categories_drop {
+    position: absolute;
+    bottom: -31rem;
+    left: 0;
+    background: #fff;
+    border-top: 8px solid var(--blu);
+    width: 100%;
+    font-family: var(--mont)!important;
+    padding: 0 7%;
+    height: 31rem
+}
+
+.drop_head {
+    padding-top: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: center
+}
+
+.drop_head h3 {
+    color: #003da5;
+    font-family: Syne!important;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 600;
+    border-right: 2px solid #A9A9A9;
+    padding-right: 1.5rem
+}
+
+.drop_head h3 span {
+    display: none
+}
+
+.drop_head span {
+    color: #767676;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal
+}
+
+.drop_body {
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 3rem
+}
+
+.drop_body h3 {
+    color: #0d0d0d;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal
+}
+
+.drop_body div div {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--blu);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem
+}
+
+.drop_body a {
+    color: #767676;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal
+}
+
 footer {
 
     background: var(--blue);
@@ -287,6 +361,14 @@ footer {
 }
 
 @media screen and (max-width: 1200px) {
+    .categories_drop {
+        height:60rem;
+        bottom: -60rem
+    }
+
+    .drop_body {
+        grid-template-columns: repeat(2,1fr)
+    }
 
     .search a{
         display: none;
@@ -445,29 +527,73 @@ footer {
 
 
 @media screen and (max-width: 745px) {
+    .drop_body {
+        grid-template-columns:repeat(1,1fr)
+    }
+
+    .categories_drop {
+        min-height: 100vh;
+        bottom: 0;
+       top: 0;
+    }
+
     p {
-        font-size: 1rem !important;
+        font-size: 1rem!important
     }
 
-    
-
-    .a{
-        gap: 1rem   ;
-    }
-    .nav_social{
-        gap: 1.5rem;
-        
-    }
-    .nav_social span{
-        font-size: 12px !important;
+    .a {
+        gap: 1rem
     }
 
-    .nav_social a{
-        font-size: 12px !important;
+    .nav_social {
+        gap: 1.5rem
+    }
+
+    .nav_social span,.nav_social a {
+        font-size: 12px!important
     }
 }
 
 @media screen and (max-width: 550px) {
+    .drop_head h3 span {
+        color:#003da5;
+        font-family: Syne!important;
+        font-size: 2.1rem;
+        font-style: normal;
+        font-weight: 600;
+        display: block
+    }
+
+    .drop_head h3 {
+        border: 0;
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+        font-size: 2.1rem
+    }
+
+    .categories_drop {
+        overflow-y: scroll;
+        scrollbar-width: thin
+    }
+
+    .categories_drop::-webkit-scrollbar {
+        width: 8px
+    }
+
+    .categories_drop::-webkit-scrollbar-thumb {
+        background-color: var(--blu)!important
+    }
+
+    .categories_drop::-webkit-scrollbar-track {
+        background-color: #eee!important
+    }
+
+    .drop_head {
+        flex-direction: column;
+        align-items: flex-start
+    }
 
     .email{
         width: 100%;
