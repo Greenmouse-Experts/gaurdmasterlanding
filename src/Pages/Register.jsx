@@ -30,6 +30,10 @@ const Register = () => {
     setUserDetail({ ...userDetail, [name]: value });
   };
   const handleSubmit = async (e) => {
+    if(userDetail.confirmPassword !== userDetail.password){
+      toast.error('Password does not match')
+      return ;
+    }
     e.preventDefault();
     setIsBusy(true);
     const payload = {
