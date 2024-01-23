@@ -149,7 +149,7 @@ footer {
 }
 
 .foot_head img {
-    width: 15rem !important;
+    width: 19rem !important;
     height: 4rem !important;
 }
 
@@ -254,7 +254,7 @@ footer {
 
 @media screen and (max-width: 900px) {
     .foot_head img {
-        width: 8rem;
+        width: 10rem;
         height: 4rem;
     }
 

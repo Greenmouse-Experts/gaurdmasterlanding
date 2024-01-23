@@ -3,7 +3,6 @@ import axios from 'axios';
 import { Link, useNavigate } from 'react-router-dom'
 import { toast } from 'react-toastify';
 import { BeatLoader } from 'react-spinners';
-import logo from '../assets/logo.png'
 
 const VerifyUser = () => {
     const myParam = new URLSearchParams(location.search).get('token');
@@ -45,7 +44,7 @@ const VerifyUser = () => {
             <div className="lg:w-[550px] mx-auto bg-white lg:px-16 p-6">
               <Link to="/">
                 <img
-                  src={logo}
+                  src={'https://res.cloudinary.com/greenmouse-tech/image/upload/v1706009737/GuardMaster/Guardmaster_transparent1_1_1_wzdsac.png'}
                   alt="logo"
                   className="w-[250px] mx-auto my-6"
                   width={400}

@@ -13,6 +13,8 @@ import Faq from "./Pages/Faq";
 import AboutUs from "./Pages/AboutUs";
 import VerifyUser from "./Pages/VerifyUser";
 import ScrollToTop from "./Components/ScrollToTop";
+import ForgetPassword from "./Pages/Forget";
+import ResetPassword from "./Pages/ResetPassword";
 
 function App() {
   return (
@@ -21,7 +23,9 @@ function App() {
       <Routes>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/forget" element={<ForgetPassword />} />
         <Route path="/auth/confirm" element={<VerifyUser/>}/>
+        <Route path="/auth/reset" element={<ResetPassword/>}/>
       </Routes>
 
       

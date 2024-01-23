@@ -10,7 +10,7 @@ const Footer = () => {
     {/* <div className="red"><img onClick={scrollToTop}  src={scroll} alt="" /></div> */}
     <div className="footer">
         <div className="foot_head">
-        <img src={Logo} alt="" />
+        <img src={'https://res.cloudinary.com/greenmouse-tech/image/upload/v1706009737/GuardMaster/Guardmaster_transparent1_1_1_wzdsac.png'} alt="img" />
         <div className="email">
         
             <div className="send">
