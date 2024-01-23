@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import "../Stylesheet/navbar.css";
 import { Link, NavLink } from "react-router-dom";
 import { RiMenuFill, RiCloseFill } from "react-icons/ri";
-import logo from "../assets/logo.png";
 import { IoIosArrowDown } from "react-icons/io";
 import { FiPhone, FiSearch } from "react-icons/fi";
 
@@ -65,7 +64,7 @@ const Navbar = () => {
         </button>
         
         <div className="log">
-          <img className="logo" src={logo} alt="" />
+          <img className="logo" src={'https://res.cloudinary.com/greenmouse-tech/image/upload/v1706009737/GuardMaster/Guardmaster_transparent1_1_1_wzdsac.png'} alt="logo" />
           <div
           ref={dropdownRef}
           className={`nav_link ${isOpen ? "show_nav" : "hide_nav"} `}

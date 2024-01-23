@@ -108,7 +108,7 @@ const Login = () => {
               </div>
             </div>
 
-            <Link>Forgot Password?</Link>
+            <Link to={'/forget'}>Forgot Password?</Link>
             <button>{isBusy? "Logging In..." : "Login"}</button>
           </form>
         </div>
