@@ -156,7 +156,7 @@ const Home = () => {
           We're <span>Guardmaster Institute </span> <br /> & We're Different
         </h2>
         <div className="flex">
-        <Link to="/course" className="bg-[#FFD347] flex items-center p-4 lg:p-5 text-xl text-black font-medium gap-x-3">
+        <Link to="/course" className="bg-[#FFD347] mont flex items-center p-4 lg:p-5 text-xl text-black font-medium gap-x-3">
             View Our Programs <RiArrowRightLine />
           </Link>
         </div>
