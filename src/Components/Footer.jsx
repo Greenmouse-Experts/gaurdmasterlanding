@@ -2,6 +2,7 @@ import React from 'react'
 import Logo from "../assets/wlogo.png"
 import '../Stylesheet/navbar.css';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 
 const Footer = () => {
@@ -23,32 +24,32 @@ const Footer = () => {
          
         <div className="foot_body">
             <div className="a">
-                <h3>Quick Links</h3>
+                <h3 className='text-[18px] font-semibold'>Quick Links</h3>
                 <Link to="/">Home</Link>
                 <Link to="/about">About Us</Link>
                 <Link to="/course" >Courses</Link>
-                <Link to="/bemember">Become a Member</Link>
+                <Link to="/faq">FAQs</Link>
             </div>
             <div className="a">
-            <h3>Courses</h3>
-               <p>Course 001</p>
-                <p>Course 002</p>
-                <p>Course 003</p>
-                <p>Course 004</p>
+            <h3 className='text-[18px] font-semibold'>Courses</h3>
+               <p><HashLink to={'/course#courses'}>Corporate Security Mgmt</HashLink></p>
+                <p><HashLink to={'/course#courses'}>Loss Prevention Mgmt</HashLink></p>
+                <p><HashLink to={'/course#courses'}>Private Security Business Mgmt</HashLink></p>
+                <p><HashLink to={'/course#courses'}>Business Resilience</HashLink></p>
             </div>
             <div className="a">
-            <h3>Company Details</h3>
-               <p>No 8 Company address. Nigeria..</p>
+            <h3 className='text-[18px] font-semibold'>Company Details</h3>
                 <p>+1 905 452 2470</p>
                 <p>info@guardmasterinstitute.ca</p>
                 <p>www.guardmasterinstitute.ca</p>
+                <p className='lg:mb-5'></p>
             </div>
             <div className="a">
-            <h3>Our Programs</h3>
-                <Link >Mini-MBA Programs</Link>
-                <Link >Professional Proficiency Programs</Link>
-                <Link >Professional Certification Programs</Link>
-                <Link>Provincial Licensing and Micro Credential Programs</Link>
+            <h3 className='text-[18px] font-semibold'>Our Programs</h3>
+                <HashLink to={'/course#courses'}>Mini-MBA Programs</HashLink>
+                <HashLink to={'/course#diploma'}>Professional Proficiency Programs</HashLink>
+                <HashLink to={'/course#ppcp'}>Professional Certification Programs</HashLink>
+                <HashLink to={'/course#plpcp'}>Provincial Licensing and Micro Credential Programs</HashLink>
             </div>
            
             
