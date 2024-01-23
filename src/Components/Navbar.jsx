@@ -4,7 +4,6 @@ import { Link, NavLink } from "react-router-dom";
 import { RiMenuFill, RiCloseFill } from "react-icons/ri";
 import { IoIosArrowDown } from "react-icons/io";
 import { FiPhone, FiSearch } from "react-icons/fi";
-import logo from "../assets/logo.png";
 import { MdOutlineClose } from "react-icons/md";
 
 const Navbar = () => {
@@ -90,7 +89,7 @@ const Navbar = () => {
         </button>
 
         <div className="log">
-          <img className="logo" src={logo} alt="" />
+          <img className="logo" src={https://res.cloudinary.com/greenmouse-tech/image/upload/v1706009737/GuardMaster/Guardmaster_transparent1_1_1_wzdsac.png} alt="" />
           {popup && (
             <div ref={categoriesDropRef} className="categories_drop">
               <div className="drop_head">
