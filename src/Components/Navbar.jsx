@@ -89,7 +89,7 @@ const Navbar = () => {
         </button>
 
         <div className="log">
-          <img className="logo" src={https://res.cloudinary.com/greenmouse-tech/image/upload/v1706009737/GuardMaster/Guardmaster_transparent1_1_1_wzdsac.png} alt="" />
+          <img className="logo" src={'https://res.cloudinary.com/greenmouse-tech/image/upload/v1706009737/GuardMaster/Guardmaster_transparent1_1_1_wzdsac.png'} alt="" />
           {popup && (
             <div ref={categoriesDropRef} className="categories_drop">
               <div className="drop_head">
