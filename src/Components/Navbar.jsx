@@ -45,7 +45,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleClickOutsideNav = (event) => {
-      if (navLinkRef.current && !navLinkRef.current.contains(event.target)) {
+      if (navLinkRef.current || !navLinkRef.current.contains(event.target)) {
         setIsOpen(false);
       }
     };

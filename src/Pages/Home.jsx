@@ -111,7 +111,7 @@ const Home = () => {
           {path.map((item) => (
             <div className="path_box">
               <img src={item.icon} alt="" />
-             <h3>{item.head}</h3>
+             <h3 className="font-medium">{item.head}</h3>
               <p>{item.body}</p>
               <div className="path_link">
                 <HashLink to={item.link}>

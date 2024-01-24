@@ -1,5 +1,4 @@
 import React from 'react'
-import Logo from "../assets/wlogo.png"
 import '../Stylesheet/navbar.css';
 import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
@@ -11,7 +10,8 @@ const Footer = () => {
     {/* <div className="red"><img onClick={scrollToTop}  src={scroll} alt="" /></div> */}
     <div className="footer">
         <div className="foot_head">
-        <img src={'https://res.cloudinary.com/greenmouse-tech/image/upload/v1706009737/GuardMaster/Guardmaster_transparent1_1_1_wzdsac.png'} alt="img" />
+            <div></div>
+        {/* <img src={'https://res.cloudinary.com/greenmouse-tech/image/upload/v1706009737/GuardMaster/Guardmaster_transparent1_1_1_wzdsac.png'} alt="img" /> */}
         <div className="email">
         
             <div className="send">
@@ -55,7 +55,7 @@ const Footer = () => {
             
         </div>
         <div className="c_tag">
-            <p>© Copyright 2023 Guardmaster Institute.</p>
+            <p>Copyright © 2024 Guardmaster Institute. All rights reserved </p>
             <div>
                 <Link>Terms & Conditions</Link>
                 <Link>Privacy Policy</Link>

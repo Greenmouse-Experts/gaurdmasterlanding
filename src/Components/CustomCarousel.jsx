@@ -93,7 +93,7 @@ import our5 from "../assets/Rectangle21.png";
         <div className="our">
       <div className="our_head">
         <span>Our Program Courses</span>
-        <h2 className="h2">Mini MBA Programs <div className="butt">
+        <h2 className="h2">All Programs <div className="butt">
             <span className="button" onClick={this.previous}>
               <RiArrowLeftLine />
             </span>
