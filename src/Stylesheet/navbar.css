@@ -674,7 +674,7 @@ footer {
     }
    .logo{
     width: 15rem;
-   height: 4rem;
+   height: auto;
    }
 }
 

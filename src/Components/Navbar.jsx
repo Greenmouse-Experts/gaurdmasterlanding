@@ -36,7 +36,7 @@ const Navbar = () => {
 
   const pop = () => {
     setPopup(!popup);
-    setIsOpen(!isOpen);
+    // setIsOpen(!isOpen);
   };
 
   const close = () => {
@@ -45,15 +45,16 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleClickOutsideNav = (event) => {
-      if (navLinkRef.current || !navLinkRef.current.contains(event.target)) {
+      if (navLinkRef.current && !navLinkRef.current.contains(event.target)) {
         setIsOpen(false);
       }
     };
 
     const handleClickOutsideCategoriesDrop = (event) => {
       if (
-        categoriesDropRef.current &&
-        !categoriesDropRef.current.contains(event.target)
+        // categoriesDropRef.current ||
+        // !categoriesDropRef.current.contains(event.target)
+        navLinkRef.current && !navLinkRef.current.contains(event.target)
       ) {
         setPopup(false);
       }
@@ -195,7 +196,7 @@ const Navbar = () => {
             <NavLink onClick={toggle} onBlur={hide} onFocus={show} to="/about">
               About GICSM
             </NavLink>
-            <NavLink onClick={pop} onBlur={hide} onFocus={show} to="">
+            <NavLink onClick={pop} onBlur={hide} onFocus={show} to="" ref={categoriesDropRef}>
               Courses <IoIosArrowDown />
             </NavLink>
             <NavLink onClick={toggle} onBlur={hide} onFocus={show} to="faq">
