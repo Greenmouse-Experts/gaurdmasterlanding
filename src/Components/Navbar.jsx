@@ -5,6 +5,7 @@ import { RiMenuFill, RiCloseFill } from "react-icons/ri";
 import { IoIosArrowDown } from "react-icons/io";
 import { FiPhone, FiSearch } from "react-icons/fi";
 import { MdOutlineClose } from "react-icons/md";
+import SearchModal from "./SearchModal";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,6 +16,7 @@ const Navbar = () => {
   const categoriesDropRef = useRef(null);
 
   const [fix, setFix] = useState(false);
+  const [showSearch, setShowSearch] = useState(false)
 
   function setFixed() {
     if (window.scrollY >= 70) {
@@ -215,12 +217,13 @@ const Navbar = () => {
         </div>
 
         <div className="search">
-          <span>
-            <FiSearch />
+          <span className="cursor-pointer" onClick={() => setShowSearch(true)}>
+            <FiSearch className="hover:scale-105 duration-100"/>
           </span>
           <Link to="/course">View Our Programs</Link>
         </div>
       </div>
+      {showSearch && <SearchModal close={() => setShowSearch(false)}/>}
     </div>
   );
 };

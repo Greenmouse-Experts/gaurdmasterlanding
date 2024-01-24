@@ -32,7 +32,17 @@ a{
 .padd{
   padding: 4rem 7%;
 }
-
+.pacity-ani{
+  animation: opaque .8s ease-in;
+}
+@keyframes opaque {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
 *{
 
   margin: 0;   
