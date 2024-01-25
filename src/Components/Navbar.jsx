@@ -1,11 +1,18 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../Stylesheet/navbar.css";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { RiMenuFill, RiCloseFill } from "react-icons/ri";
 import { IoIosArrowDown } from "react-icons/io";
 import { FiPhone, FiSearch } from "react-icons/fi";
 import { MdOutlineClose } from "react-icons/md";
 import SearchModal from "./SearchModal";
+import {
+  Menu,
+  MenuHandler,
+  MenuList,
+  MenuItem,
+  Button,
+} from "@material-tailwind/react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,9 +21,10 @@ const Navbar = () => {
   const show = () => setIsOpen(true);
   const navLinkRef = useRef(null);
   const categoriesDropRef = useRef(null);
+  const navigate = useNavigate()
 
   const [fix, setFix] = useState(false);
-  const [showSearch, setShowSearch] = useState(false)
+  const [showSearch, setShowSearch] = useState(false);
 
   function setFixed() {
     if (window.scrollY >= 70) {
@@ -56,7 +64,8 @@ const Navbar = () => {
       if (
         // categoriesDropRef.current ||
         // !categoriesDropRef.current.contains(event.target)
-        navLinkRef.current && !navLinkRef.current.contains(event.target)
+        navLinkRef.current &&
+        !navLinkRef.current.contains(event.target)
       ) {
         setPopup(false);
       }
@@ -92,7 +101,13 @@ const Navbar = () => {
         </button>
 
         <div className="log">
-          <img className="logo" src={'https://res.cloudinary.com/greenmouse-tech/image/upload/v1706009737/GuardMaster/Guardmaster_transparent1_1_1_wzdsac.png'} alt="" />
+          <img
+            className="logo"
+            src={
+              "https://res.cloudinary.com/greenmouse-tech/image/upload/v1706009737/GuardMaster/Guardmaster_transparent1_1_1_wzdsac.png"
+            }
+            alt=""
+          />
           {popup && (
             <div ref={categoriesDropRef} className="categories_drop">
               <div className="drop_head">
@@ -189,19 +204,38 @@ const Navbar = () => {
             </div>
           )}
 
-          <div ref={navLinkRef} className={`nav_link ${isOpen ? "show_nav" : "hide_nav"} `}
+          <div
+            ref={navLinkRef}
+            className={`nav_link ${isOpen ? "show_nav" : "hide_nav"} `}
           >
             <NavLink onClick={toggle} onBlur={hide} onFocus={show} to="/">
               {" "}
               Home
             </NavLink>
-            <NavLink onClick={toggle} onBlur={hide} onFocus={show} to="/about">
-              About GICSM
+            <div className="border-b lg:border-none text-left lg:text-center pl-8 lg:pl-0 py-4" onClick={toggle} onBlur={hide} onFocus={show}>
+              <Menu>
+                <MenuHandler>
+                  <Button className="bg-transparent p-0 m-0 shadow-none hover:shadow-none text-black !mont lg:!syne capitalize font-[500] text-[14px] lg:text-[16px]">
+                    About GICSM
+                  </Button>
+                </MenuHandler>
+                <MenuList className="z-[10000]">
+                  <MenuItem className="whitespace-nowrap text-black !syne text-[15px]" onClick={() => navigate('/about')}>About Us</MenuItem>
+                  <MenuItem className="whitespace-nowrap text-black !syne text-[15px]" onClick={() => navigate('/partnership')}>Industry Partnership</MenuItem>
+                  <MenuItem className="whitespace-nowrap text-black !syne text-[15px]" onClick={() => navigate('/leadership')}>Leadership and Governance</MenuItem>
+                </MenuList>
+              </Menu>
+            </div>
+            <NavLink
+              
+              to=""
+              ref={categoriesDropRef}
+            >
+              Courses <IoIosArrowDown className="hidden lg:block" onClick={pop}
+              onBlur={hide}
+              onFocus={show}/>
             </NavLink>
-            <NavLink onClick={pop} onBlur={hide} onFocus={show} to="" ref={categoriesDropRef}>
-              Courses <IoIosArrowDown />
-            </NavLink>
-            <NavLink onClick={toggle} onBlur={hide} onFocus={show} to="faq">
+            <NavLink  onClick={toggle} onBlur={hide} onFocus={show} to="faq">
               FAQs
             </NavLink>
             <NavLink
@@ -218,12 +252,12 @@ const Navbar = () => {
 
         <div className="search">
           <span className="cursor-pointer" onClick={() => setShowSearch(true)}>
-            <FiSearch className="hover:scale-105 duration-100"/>
+            <FiSearch className="hover:scale-105 duration-100" />
           </span>
           <Link to="/course">View Our Programs</Link>
         </div>
       </div>
-      {showSearch && <SearchModal close={() => setShowSearch(false)}/>}
+      {showSearch && <SearchModal close={() => setShowSearch(false)} />}
     </div>
   );
 };

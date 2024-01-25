@@ -10,7 +10,7 @@ const Footer = () => {
     {/* <div className="red"><img onClick={scrollToTop}  src={scroll} alt="" /></div> */}
     <div className="footer">
         <div className="foot_head">
-            <div></div>
+            <div><p className='text-white font-semibold !text-3xl'>Subscribe to our Newsletter</p></div>
         {/* <img src={'https://res.cloudinary.com/greenmouse-tech/image/upload/v1706009737/GuardMaster/Guardmaster_transparent1_1_1_wzdsac.png'} alt="img" /> */}
         <div className="email">
         
@@ -55,7 +55,7 @@ const Footer = () => {
             
         </div>
         <div className="c_tag">
-            <p>Copyright © 2024 Guardmaster Institute. All rights reserved </p>
+            <p>Copyright © 2024 Guardmaster Institute. All Rights Reserved </p>
             <div>
                 <Link>Terms & Conditions</Link>
                 <Link>Privacy Policy</Link>

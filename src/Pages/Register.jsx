@@ -45,7 +45,8 @@ const Register = () => {
     };
     await registerUser(payload)
       .then((data) => {
-        console.log(data);
+        toast.success(data.message)
+        showPop(true)
         setIsBusy(false);
       })
       .catch((error) => {

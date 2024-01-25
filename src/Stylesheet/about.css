@@ -2,6 +2,10 @@
     padding-top: 7rem;
 }
 
+.boxes{
+    padding: 3rem 7% 1.5rem 7%;
+}
+
 .header {
     height: 33vh;
     overflow: hidden;
@@ -83,7 +87,7 @@
 }
 
 .about_main .discover {
-    padding: 6rem 7%;
+    padding: 3rem 7% 1.5rem 7%;
     align-items: start;
     height: 100%;
 }
@@ -434,8 +438,8 @@ line-height: 150%; /* 27px */
         align-items: start;
     }
     .header_img img {
-        background-size: cover;
-        background-size: contain;
+        object-fit: cover !important;
+        object-position: center;
     }
 
     .header_cont{

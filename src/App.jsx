@@ -15,6 +15,8 @@ import VerifyUser from "./Pages/VerifyUser";
 import ScrollToTop from "./Components/ScrollToTop";
 import ForgetPassword from "./Pages/Forget";
 import ResetPassword from "./Pages/ResetPassword";
+import Partnership from "./Pages/Partnership";
+import Leadership from "./Pages/Leadership";
 
 function App() {
   return (
@@ -37,6 +39,8 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/course" element={<Course />} />
           <Route path="/bemember" element={<BeMember />} />
+          <Route path="/partnership" element={<Partnership />} />
+          <Route path="/leadership" element={<Leadership />} />
           <Route path="/faq" element={<Faq/>}/>
           <Route path="/aboutus" element={<AboutUs/>}/>
         </Routes>

@@ -9,7 +9,7 @@ export const Header = ({ image, title, body }) => {
       <div className="header">
         <div className="header_cont">
           <div className="header_img">
-            <img src={image} alt="" />
+            <img src={image} alt="banner" className=""/>
           </div>
           <div
             data-aos="fade-up"
