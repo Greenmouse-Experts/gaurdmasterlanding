@@ -99,7 +99,7 @@ const Home = () => {
             <div className="path_box">
               <img src={item.icon} alt="" />
              <h3 className="font-medium">{item.head}</h3>
-              <p>{item.body}</p>
+              {/* <p>{item.body}</p> */}
               <div className="path_link">
                 <HashLink to={item.link}>
                   <HiArrowRight />

@@ -215,8 +215,8 @@ const Navbar = () => {
             <div className="border-b lg:border-none text-left lg:text-center pl-8 lg:pl-0 py-4" onClick={toggle} onBlur={hide} onFocus={show}>
               <Menu>
                 <MenuHandler>
-                  <Button className="bg-transparent p-0 m-0 shadow-none hover:shadow-none text-black !mont lg:!syne capitalize font-[500] text-[14px] lg:text-[16px]">
-                    About GICSM
+                  <Button className="bg-transparent flex items-center gap-x-2 p-0 m-0 shadow-none hover:shadow-none text-black !mont lg:!syne capitalize font-[500] text-[14px] lg:text-[16px]">
+                    About GICSM <IoIosArrowDown/>
                   </Button>
                 </MenuHandler>
                 <MenuList className="z-[10000]">
