@@ -22,7 +22,7 @@ const HeroSlide = () => {
         className="h-[570px]"
       >
         <SwiperSlide>
-        <div className="home bg-first bg-cover">
+        <div className="home bg-first bg-cover bg-top ">
         <div className="home_text">
           <h2>
             Your Gateway to Knowledge <br /> and Excellence!
@@ -39,7 +39,7 @@ const HeroSlide = () => {
       </div>
         </SwiperSlide>
         <SwiperSlide>
-        <div className="home bg-second bg-cover">
+        <div className="home bg-second bg-cover bg-top">
         <div className="home_text">
           <h2>
           Explore Infinite Possibilities  <br /> Here!
@@ -55,7 +55,7 @@ const HeroSlide = () => {
       </div>
         </SwiperSlide>
         <SwiperSlide>
-        <div className="home bg-third bg-cover">
+        <div className="home bg-third bg-cover bg-top">
         <div className="home_text">
           <h2>
           Building Bridges to Success in  <br />Security Management
@@ -71,7 +71,7 @@ const HeroSlide = () => {
       </div>
         </SwiperSlide>
         <SwiperSlide>
-        <div className="home bg-fourth bg-cover">
+        <div className="home bg-fourth bg-cover bg-top">
         <div className="home_text">
           <h2>
           Unleashing Potential, Driving <br /> and Excellence!
@@ -87,7 +87,7 @@ const HeroSlide = () => {
       </div>
         </SwiperSlide>
         <SwiperSlide>
-        <div className="home bg-fifth bg-cover">
+        <div className="home bg-fifth bg-cover bg-top">
         <div className="home_text">
           <h2>
           Innovative Learning Solutions  <br /> for All!
