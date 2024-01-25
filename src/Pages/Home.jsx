@@ -17,6 +17,7 @@ import svg2 from "../assets/svg2.svg"
 import sv from "../assets/sv.svg"
 import Footer from "../Components/Footer";
 import { HashLink } from "react-router-hash-link/dist/react-router-hash-link.cjs.production";
+import HeroSlide from "../Components/Homepage/HeroSlide";
 
 
 
@@ -90,21 +91,7 @@ const Home = () => {
 
   return (
     <div className="home_container">
-      <div className="home">
-        <div className="home_text">
-          <h2>
-            Your Gateway to Knowledge <br /> and Excellence!
-          </h2>
-          <p>
-            Ignite Your Potential: Explore, Learn, and <br /> Thrive at Guardmaster
-            Institute
-          </p>
-
-          <Link to="/course">
-            Discover all our Courses <RiArrowRightLine />
-          </Link>
-        </div>
-      </div>
+      <HeroSlide/>
       <div className="path">
         <h2>Discover your path to success</h2>
         <div className="path_grid">
@@ -121,19 +108,19 @@ const Home = () => {
             </div>
           ))}
         </div>
-        <div className="discover no">
-          <div className="dis_img">
-            <img src={dis} alt="" />
+        <div className="lg:flex justify-between items-center pt-12 lg:pt-24">
+          <div className="lg:w-3/12">
+            <img src={'https://res.cloudinary.com/greenmouse-tech/image/upload/v1706191235/GuardMaster/Blob_Save_pkqbfc.png'} alt="img" className="w-full" />
           </div>
-          <div className="dis_text">
-            <span>About Us</span>
-            <h2 className="h2">
+          <div className="lg:w-8/12 mt-10 lg:mt-0">
+            <span className="!syne text-[#003DA5] font-semibold">About Us</span>
+            <h2 className="h2 mt-3">
               Discover the Essence of Guardmaster Institute
             </h2>
-            <p>
+            <p className="mt-3 lg:mt-8 text-lg !mont leading-[33px]">
             Guardmaster Institute of Corporate Security Management™ is an accredited CPD Provider by TheCPD Group, UK. We are also licensed by the Governments of Ontario and Alberta in Canada as Trainer for their respective Provincial Security Guard Licensing programs.
             </p>
-            <Link to="about">
+            <Link to="about" className="mt-6 lg:mt-12 flex gap-x-2 items-center !mont text-[#003DA5] font-semibold">
               Learn More <RiArrowRightLine />
             </Link>
           </div>
