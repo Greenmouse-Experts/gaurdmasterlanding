@@ -25,7 +25,7 @@ const Leadership = () => {
                   />
                 </div>
                 <div className="lg:w-[70%]">
-                  <p className="!syne text-3xl">Adegbenga William Koko</p>
+                  <p className="!syne mt-4 lg:mt-0 !text-3xl">Adegbenga William Koko</p>
                   <p className="mt-4 !mont italic text-[#003DA5]">
                     MSc, MBA, PGCert. (Forensics), CA, CFE, CAMS, CCLP, CMILT
                     (UK), CBRM, LPC, ChLPS, CPO, CPOI, CC, MSyI, CPP® Executive
