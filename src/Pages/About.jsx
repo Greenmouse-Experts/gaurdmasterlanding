@@ -1,13 +1,12 @@
 import React from "react";
 import "../Stylesheet/about.css";
+import "../Stylesheet/style.css"
 import { Header } from "../Components/Header";
-import about from "../assets/about.png";
 import dis from "../assets/diss.png";
 import div from "../assets/div.svg";
 import lead from "../assets/lead.svg";
 import { Link, useNavigate } from "react-router-dom";
 import Footer from "../Components/Footer";
-import { RiArrowRightSLine } from "react-icons/ri";
 import { FaArrowRight } from "react-icons/fa";
 
 
@@ -107,7 +106,7 @@ const About = () => {
               </div>
             ))
           }
-          <div className="bg-[#003DA5] relative p-6 text-white">
+          <div className="bg-[#003DA5] h-[200px] lg:h-auto relative p-6 text-white">
             <p className="font-semibold !mont">Our Industry Patnerships</p>
             <p className="!mont text-[14px] mt-4">View our certifications and industry patnerships</p>
             <div className="w-[47px] absolute bottom-10 right-10 h-[47px] bg-[#FFD347] rounded-[50%] flex items-center justify-center cursor-pointer" onClick={() => navigate('/partnership')}>
@@ -149,13 +148,13 @@ const About = () => {
           </div>
         </div>
       </div>
-      <div className="brow">
+      {/* <div className="brow">
         <div className="brow_text">
           <h2 className="h2">Browse Through Our <span>Offered Courses</span></h2>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam lacinia leo eget turpis pretium elementum. Vivamus ante purus.</p>
         </div>
         <Link to="/course">View Courses</Link>
-      </div>
+      </div> */}
       <Footer/>
     </div>
   );

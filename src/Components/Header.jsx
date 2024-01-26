@@ -15,7 +15,7 @@ export const Header = ({ image, title, body }) => {
             data-aos="fade-up"
             data-aos-anchor-placement="bottom-bottom"
             data-aos-duration="1000"
-            className="header_text"
+            className="header_text bg-gradient-to-r  from-gray-900 "
           >
             <h2>{title}</h2>
             <p><Link to="/">Home</Link> / {body}</p>
