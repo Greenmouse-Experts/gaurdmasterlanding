@@ -62,7 +62,7 @@ const About = () => {
   ]
   return (
     <div className="about_main">
-      <Header image={about} title="About Us" body="About" />
+      <Header image={'https://res.cloudinary.com/greenmouse-tech/image/upload/v1706267755/rsh/Group_48097478_1_dvsu16.png'} title="About Us" body="About" />
       <div className="discover ">
         <div className="dis_img">
           <img src={dis} alt="" />

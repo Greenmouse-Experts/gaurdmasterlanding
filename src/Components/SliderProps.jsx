@@ -102,7 +102,7 @@ export class SliderProps extends Component {
                   </span>
                   <h3>{item.head}</h3>
                   <p>{item.body}</p>
-                  <Link to="#">
+                  <Link to={'/course/139010'}>
                     Enroll Now
                     <RiArrowRightLine />
                   </Link>

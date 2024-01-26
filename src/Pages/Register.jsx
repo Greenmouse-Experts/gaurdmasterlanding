@@ -60,7 +60,7 @@ const Register = () => {
       <div className="main_login">
         <div className="side1 reg order1">
           <div>
-            <img src={logo} alt="" />
+            <img src={'https://res.cloudinary.com/greenmouse-tech/image/upload/v1706278834/rsh/logo2-removebg-preview_fcvxwc.png'} alt="" />
             <div>
               <h3>Hello!</h3>
               <p>
@@ -81,7 +81,7 @@ const Register = () => {
           </div>
           <div className="login">
             <div className="login_logo">
-              <img src={log} alt="" />
+              <img src={'https://res.cloudinary.com/greenmouse-tech/image/upload/v1706009737/GuardMaster/Guardmaster_transparent1_1_1_wzdsac.png'} alt="" />
               <h3>Hello!</h3>
             </div>
             <h2 onClick={() => showPop(true)}>Sign Up</h2>
