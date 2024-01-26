@@ -96,7 +96,7 @@ const Home = () => {
         <h2>Discover your path to success</h2>
         <div className="path_grid mt-6 lg:mt-12">
           {path.map((item) => (
-            <div className="path_box relative">
+            <div className="path_box relative mt-7 lg:mt-0">
               <div className="absolute w-full pr-2 lg:pr-5 -top-8 flex justify-center">
               <img src={item.icon} alt="icons" className="!w-16" />
               </div>
