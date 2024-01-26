@@ -29,6 +29,9 @@
 .bg-fifth{
   background:  linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0.00) 60.2%), url('https://res.cloudinary.com/greenmouse-tech/image/upload/v1706174280/GuardMaster/Property_1_Rectangle_21200_j07fqu.png');
 }
+.bg-sixth{
+  background:  linear-gradient(90deg, #000 0%, rgba(0, 0, 0, 0.00) 60.2%), url('https://res.cloudinary.com/greenmouse-tech/image/upload/v1706266960/rsh/Property_1_Variant6_1_hdn7cq.png');
+}
 
 .home_text {
   display: flex;

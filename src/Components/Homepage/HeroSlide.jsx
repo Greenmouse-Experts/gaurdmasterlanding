@@ -102,6 +102,22 @@ const HeroSlide = () => {
         </div>
       </div>
         </SwiperSlide>
+        <SwiperSlide>
+        <div className="home bg-sixth bg-cover bg-top">
+        <div className="home_text">
+          <h2>
+          Innovative Learning Solutions  <br /> for All!
+          </h2>
+          <p>
+          We offer innovative learning solutions to diverse learning styles and adapt to the needs of   <br /> the education landscape.
+          </p>
+
+          <Link to="/course">
+            Discover all our Courses <RiArrowRightLine />
+          </Link>
+        </div>
+      </div>
+        </SwiperSlide>
       </Swiper>
     </>
   );
