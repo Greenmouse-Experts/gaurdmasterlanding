@@ -6,9 +6,9 @@
 :root {
   --mont: 'Montserrat', sans-serif;
   --sky: 'Syne', sans-serif;
-  --blue:  linear-gradient(180deg, #003DA5 0%, #023B9D 100%);
+  --blue:  linear-gradient(180deg, #052b5e 0%, #052b5e 100%);
   --yell: #FFD347;
-  --blu: #003DA5;
+  --blu: #052b5e;
 
 }
 

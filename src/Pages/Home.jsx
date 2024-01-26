@@ -24,25 +24,25 @@ import HeroSlide from "../Components/Homepage/HeroSlide";
 const Home = () => {
   const path = [
     {
-      icon: icon1 ,
+      icon: 'https://res.cloudinary.com/greenmouse-tech/image/upload/v1706265403/rsh/Group_48097471_thxmie.png',
       head: "Mini-MBA Programs",
       body: "Providing participants with a comprehensive overview of essential business concepts and management skills",
       link: "/course#courses",
     },
     {
-      icon: icon2 ,
+      icon: 'https://res.cloudinary.com/greenmouse-tech/image/upload/v1706265403/rsh/Group_48097470_uh23kz.png' ,
       head: "Professional Proficiency Diploma (PPD) Programs",
       body: "Providing participants with a comprehensive overview of essential business concepts and management skills",
       link: "/course#diploma",
     },
     {
-      icon: icon3,
+      icon: 'https://res.cloudinary.com/greenmouse-tech/image/upload/v1706265403/rsh/Group_48097469_cxms08.png',
       head: "Professional Proficiency Certificate (PPC) Programs",
       body: "Providing participants with a comprehensive overview of essential business concepts and management skills",
       link: "/course#ppcp",
     },
     {
-      icon:icon4,
+      icon: 'https://res.cloudinary.com/greenmouse-tech/image/upload/v1706265406/rsh/Group_48097468_ntudes.png',
       head: "Provincial Licensing And Professional Certification Programs",
       body: "Providing participants with a comprehensive overview of essential business concepts and management skills",
       link: "/course#plpcp",
@@ -94,11 +94,13 @@ const Home = () => {
       <HeroSlide/>
       <div className="path">
         <h2>Discover your path to success</h2>
-        <div className="path_grid">
+        <div className="path_grid mt-6 lg:mt-12">
           {path.map((item) => (
-            <div className="path_box">
-              <img src={item.icon} alt="" />
-             <h3 className="font-medium">{item.head}</h3>
+            <div className="path_box relative">
+              <div className="absolute w-full pr-2 lg:pr-5 -top-8 flex justify-center">
+              <img src={item.icon} alt="icons" className="!w-16" />
+              </div>
+             <h3 className="font-medium text-center mt-16">{item.head}</h3>
               {/* <p>{item.body}</p> */}
               <div className="path_link">
                 <HashLink to={item.link}>
