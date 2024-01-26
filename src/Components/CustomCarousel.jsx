@@ -139,7 +139,7 @@ import our5 from "../assets/Rectangle21.png";
                 </span>
                 <h3>{item.head}</h3>
                 <p>{item.body}</p>
-                <Link>
+                <Link to={'/course/139010'}>
                   Enroll Now<RiArrowRightLine />
                 </Link>
               </div>

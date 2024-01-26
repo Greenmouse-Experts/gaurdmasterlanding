@@ -17,6 +17,7 @@ import ForgetPassword from "./Pages/Forget";
 import ResetPassword from "./Pages/ResetPassword";
 import Partnership from "./Pages/Partnership";
 import Leadership from "./Pages/Leadership";
+import CourseDetail from "./Pages/CourseDetail";
 
 function App() {
   return (
@@ -43,6 +44,7 @@ function App() {
           <Route path="/leadership" element={<Leadership />} />
           <Route path="/faq" element={<Faq/>}/>
           <Route path="/aboutus" element={<AboutUs/>}/>
+          <Route path="/course/:id" element={<CourseDetail/>}/>
         </Routes>
       
       </div>

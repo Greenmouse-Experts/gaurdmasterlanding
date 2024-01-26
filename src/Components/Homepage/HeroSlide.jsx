@@ -93,7 +93,7 @@ const HeroSlide = () => {
           Innovative Learning Solutions  <br /> for All!
           </h2>
           <p>
-          We offer innovative learning solutions to diverse learning styles and adapt to the needs of   <br /> the education landscape.
+          We offer innovative learning solutions to diverse learning styles and adapt to   <br />the needs of the education landscape.
           </p>
 
           <Link to="/course">
@@ -109,7 +109,7 @@ const HeroSlide = () => {
           Innovative Learning Solutions  <br /> for All!
           </h2>
           <p>
-          We offer innovative learning solutions to diverse learning styles and adapt to the needs of   <br /> the education landscape.
+          We offer innovative learning solutions to diverse learning styles and adapt to    <br />the needs of the education landscape.
           </p>
 
           <Link to="/course">
