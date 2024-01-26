@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import 'react-phone-number-input/style.css'
+import "react-phone-number-input/style.css";
 // import PhoneInput from 'react-phone-number-input'
 import logo from "../assets/wlogo.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AiFillEye } from "react-icons/ai";
 import "../Stylesheet/login.css";
 import log from "../assets/logo.png";
@@ -14,6 +14,7 @@ const Register = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [isBusy, setIsBusy] = useState(false);
   const [pop, showPop] = useState(false);
+  const navigate = useNavigate();
 
   const togglePassword = () => {
     setShowPassword(!showPassword); // Toggle the showPassword state
@@ -30,9 +31,9 @@ const Register = () => {
     setUserDetail({ ...userDetail, [name]: value });
   };
   const handleSubmit = async (e) => {
-    if(userDetail.confirmPassword !== userDetail.password){
-      toast.error('Password does not match')
-      return ;
+    if (userDetail.confirmPassword !== userDetail.password) {
+      toast.error("Password does not match");
+      return;
     }
     e.preventDefault();
     setIsBusy(true);
@@ -45,8 +46,8 @@ const Register = () => {
     };
     await registerUser(payload)
       .then((data) => {
-        toast.success(data.message)
-        showPop(true)
+        toast.success(data.message);
+        showPop(true);
         setIsBusy(false);
       })
       .catch((error) => {
@@ -60,7 +61,14 @@ const Register = () => {
       <div className="main_login">
         <div className="side1 reg order1">
           <div>
-            <img src={'https://res.cloudinary.com/greenmouse-tech/image/upload/v1706278834/rsh/logo2-removebg-preview_fcvxwc.png'} alt="" />
+            <img
+              src={
+                "https://res.cloudinary.com/greenmouse-tech/image/upload/v1706278834/rsh/logo2-removebg-preview_fcvxwc.png"
+              }
+              alt="logo"
+              className="cursor-pointer"
+              onClick={() => navigate("/")}
+            />
             <div>
               <h3>Hello!</h3>
               <p>
@@ -81,8 +89,14 @@ const Register = () => {
           </div>
           <div className="login">
             <div className="login_logo">
-              <img src={'https://res.cloudinary.com/greenmouse-tech/image/upload/v1706009737/GuardMaster/Guardmaster_transparent1_1_1_wzdsac.png'} alt="" />
-              <h3>Hello!</h3>
+              <img
+                src={
+                  "https://res.cloudinary.com/greenmouse-tech/image/upload/v1706009737/GuardMaster/Guardmaster_transparent1_1_1_wzdsac.png"
+                }
+                alt="logo"
+                onClick={() => navigate('/')}
+              />
+              {/* <h3>Hello!</h3> */}
             </div>
             <h2 onClick={() => showPop(true)}>Sign Up</h2>
             {/* <div className="go">
@@ -192,6 +206,10 @@ const Register = () => {
 
               <button>{isBusy ? "Siging Up ..." : "Sign Up"}</button>
             </form>
+            <div className="don2 flex gap-x-2">
+          <p>Already have an account?</p>
+          <span className="font-semibold text-blue-900" onClick={() => navigate('/login')}>Sign In</span>
+        </div>
           </div>
         </div>
       </div>

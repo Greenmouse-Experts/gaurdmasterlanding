@@ -1,14 +1,13 @@
 import React, { useState } from "react";
-import logo from "../assets/wlogo.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { AiFillEye } from "react-icons/ai";
 import "../Stylesheet/login.css";
-import log from "../assets/logo.png"
 import { loginUser } from "../services/api/authApi";
 import { toast } from "react-toastify";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const navigate = useNavigate()
 
   const togglePassword = () => {
     setShowPassword(!showPassword); // Toggle the showPassword state
@@ -47,7 +46,7 @@ const Login = () => {
     <div className="main_login">
       <div className="side1">
         <div>
-          <img src={'https://res.cloudinary.com/greenmouse-tech/image/upload/v1706278834/rsh/logo2-removebg-preview_fcvxwc.png'} alt="" />
+          <img src={'https://res.cloudinary.com/greenmouse-tech/image/upload/v1706278834/rsh/logo2-removebg-preview_fcvxwc.png'} alt="logo" className="cursor-pointer" onClick={() => navigate('/')}/>
           <div>
             <h3>Welcome Back!</h3>
             <p>
@@ -60,14 +59,14 @@ const Login = () => {
         </div>
       </div>
       <div className="side2">
-        <div className="don">
+        <div className="don hidden">
           <p>Don’t have an account?</p>
           <Link to='/register'>Sign Up</Link>
         </div>
         
         <div className="login">
         <div className="login_logo">
-            <img src={'https://res.cloudinary.com/greenmouse-tech/image/upload/v1706009737/GuardMaster/Guardmaster_transparent1_1_1_wzdsac.png'} alt="" />
+            <img src={'https://res.cloudinary.com/greenmouse-tech/image/upload/v1706009737/GuardMaster/Guardmaster_transparent1_1_1_wzdsac.png'} alt="logo" onClick={() => navigate('/')} />
             <h3>Welcome Back!</h3>
         </div>
           <h2>Log in</h2>
@@ -111,6 +110,10 @@ const Login = () => {
             <Link to={'/forget'}>Forgot Password?</Link>
             <button>{isBusy? "Logging In..." : "Login"}</button>
           </form>
+          <div className="don2 flex gap-x-2">
+          <p>Don’t have an account?</p>
+          <span className="font-semibold text-blue-900" onClick={() => navigate('/register')}>Sign Up</span>
+        </div>
         </div>
       </div>
     </div>
